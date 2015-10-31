@@ -1,48 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Planningboards</h1>
+<div class = "container">
+  <h1>Vision Board</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Goal1</th>
-      <th>Goal2</th>
-      <th>Goal3</th>
-      <th>Goal4</th>
-      <th>Goal5</th>
-      <th>Url1</th>
-      <th>Url2</th>
-      <th>Url3</th>
-      <th>Url4</th>
-      <th>Url5</th>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @planningboards.each do |planningboard| %>
-      <tr>
-        <td><%= planningboard.goal1 %></td>
-        <td><%= planningboard.goal2 %></td>
-        <td><%= planningboard.goal3 %></td>
-        <td><%= planningboard.goal4 %></td>
-        <td><%= planningboard.goal5 %></td>
-        <td><%= planningboard.url1 %></td>
-        <td><%= planningboard.url2 %></td>
-        <td><%= planningboard.url3 %></td>
-        <td><%= planningboard.url4 %></td>
-        <td><%= planningboard.url5 %></td>
+      <div class = "container board">
+        <h2 class = "board-name"><%= planningboard.name %></h2>
+          <div class = "row">
+            <div class = "col-md-3 img-box col-centered">
+              <%= image_tag planningboard.url1 %>
+            </div>
+            <div class = "col-md-3 img-box col-centered">
+              <%= image_tag planningboard.url2 %>
+            </div>
+            <div class = "col-md-3 img-box col-centered">
+              <%= image_tag planningboard.url3 %>
+            </div>
+            <div class = "row">
+              <div class = "col-md-3 img-box col-centered">
+              <%= image_tag planningboard.url4 %>
+            </div>
+            <div class = "col-md-3 col-centered">
+              <%= image_tag planningboard.url5 %>
+            </div>
+          </div>
 
-        <td><%= planningboard.name %></td>
-        <td><%= link_to 'Show', planningboard %></td>
-        <td><%= link_to 'Edit', edit_planningboard_path(planningboard) %></td>
-        <td><%= link_to 'Destroy', planningboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+            <%= link_to 'Show', planningboard %>
+            <%= link_to 'Edit', edit_planningboard_path(planningboard) %>
+            <%= link_to 'Destroy', planningboard, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
     <% end %>
-  </tbody>
-</table>
-
 <br>
 
 <%= link_to 'New Planningboard', new_planningboard_path %>
