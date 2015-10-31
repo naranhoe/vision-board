@@ -40,3 +40,7 @@ margin: 5 auto;
   max-width: 300px;
   margin: 0 auto;
 }
+
+#comment-form {
+  display: none;
+}

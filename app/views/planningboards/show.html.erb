@@ -10,6 +10,27 @@
     <%= link_to 'Back', planningboards_path %>
   </p>
 
+  <p>
+    <button type="button" name="button" id="show-form">Add a comment</button> <strong>Comments:
+      <%= @planningboard.comments.count %></strong>
+  </p>
+
+  <div id="comment-form">
+      <%= form_for([@planningboard, @planningboard.comments.build]) do |f| %>
+        <p>
+          <%= f.label :commenter, "Name" %><br>
+          <%= f.text_field :commenter %>
+        </p>
+        <p>
+          <%= f.label :body, "Comment" %><br>
+          <%= f.text_area :body %>
+        </p>
+        <p>
+          <%= f.submit "Submit" %>
+        </p>
+      <% end %>
+  </div>
+
   <div class="row">
 
     <div class="col-md-4 show-box">
@@ -95,6 +116,23 @@
         </p>
       </div>
     </div>
+
+  </div>
+
+  <div class="row">
+
+    <h2>Comments</h2>
+      <% @planningboard.comments.each do |comment| %>
+        <p>
+          <strong>Name:</strong>
+          <%= comment.commenter %>
+        </p>
+
+        <p>
+          <strong>Comment:</strong>
+          <%= comment.body %>
+        </p>
+      <% end %>
 
   </div>
 
