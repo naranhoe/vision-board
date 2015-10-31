@@ -1,64 +1,91 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Goal1:</strong>
-  <%= @planningboard.goal1 %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Goal2:</strong>
-  <%= @planningboard.goal2 %>
-</p>
+  <p>
+    <h1><%= @planningboard.name %></h1>
+  </p>
+  <p>
+    <%= link_to 'Edit', edit_planningboard_path(@planningboard) %> |
+    <%= link_to 'Back', planningboards_path %>
+  </p>
 
-<p>
-  <strong>Goal3:</strong>
-  <%= @planningboard.goal3 %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Goal4:</strong>
-  <%= @planningboard.goal4 %>
-</p>
+    <div class="col-md-4 show-box">
+      <p>
+        <%= @planningboard.goal1 %>
+      </p>
+      <p>
+        <%= image_tag @planningboard.url1 %>
+      </p>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description1 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Goal5:</strong>
-  <%= @planningboard.goal5 %>
-</p>
+    <div class="col-md-4 show-box">
+      <p>
+        <%= @planningboard.goal2 %>
+      </p>
+      <p>
+        <%= image_tag @planningboard.url2 %>
+      </p>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description2 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Url1:</strong>
-  <%= image_tag @planningboard.url1 %>
-</p>
+    <div class="col-md-4 show-box">
+      <p>
+        <%= @planningboard.goal3 %>
+      </p>
+      <p>
+        <%= image_tag @planningboard.url3 %>
+      </p>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description3 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Url2:</strong>
-  <%= image_tag @planningboard.url2 %>
-</p>
+  </div>
 
-<p>
-  <strong>Url3:</strong>
-  <%= image_tag @planningboard.url3 %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Url4:</strong>
-  <%= image_tag @planningboard.url4 %>
-</p>
+    <div class="col-md-6 show-box">
+      <p>
+        <%= @planningboard.goal4 %>
+      </p>
+      <p>
+        <%= image_tag @planningboard.url4 %>
+      </p>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description4 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Url5:</strong>
-  <%= image_tag @planningboard.url5 %>
-</p>
+    <div class="col-md-6 show-box">
+      <p>
+        <%= @planningboard.goal5 %>
+      </p>
+      <p>
+        <%= image_tag @planningboard.url5 %>
+      </p>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description5 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Description1:</strong>
-  <%= @planningboard.description1 %>
-</p>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @planningboard.name %>
-</p>
-
-<%= link_to 'Edit', edit_planningboard_path(@planningboard) %> |
-<%= link_to 'Back', planningboards_path %>
+</div>

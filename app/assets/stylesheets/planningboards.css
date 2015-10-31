@@ -23,3 +23,12 @@ margin: 5 auto;
 .board{
   text-align: center;
 }
+
+.show-box {
+  text-align: center;
+}
+
+.show-description {
+  max-width: 300px;
+  margin: 0 auto;
+}
