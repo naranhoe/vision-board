@@ -28,6 +28,14 @@ margin: 5 auto;
   text-align: center;
 }
 
+.show-box img {
+  border-radius: 10px
+}
+
+.show-box hr {
+  width: 250px;
+}
+
 .show-description {
   max-width: 300px;
   margin: 0 auto;
