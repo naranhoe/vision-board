@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  goal1: MyString
+  goal2: MyString
+  goal3: MyString
+  goal4: MyString
+  goal5: MyString
+  url1: MyString
+  url2: MyString
+  url3: MyString
+  url4: MyString
+  url5: MyString
+  description: MyText
+  name: MyString
+
+two:
+  goal1: MyString
+  goal2: MyString
+  goal3: MyString
+  goal4: MyString
+  goal5: MyString
+  url1: MyString
+  url2: MyString
+  url3: MyString
+  url4: MyString
+  url5: MyString
+  description: MyText
+  name: MyString
