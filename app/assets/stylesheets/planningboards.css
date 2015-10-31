@@ -2,3 +2,24 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+img{
+  height: 300px;
+  width: 300px;
+}
+.img-box{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.col-centered{
+/*float: none;*/
+margin: 5 auto;
+}
+
+.board-name{
+  margin: 0 auto;
+}
+
+.board{
+  text-align: center;
+}
