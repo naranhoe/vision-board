@@ -7,4 +7,5 @@ $(document).ready(function() {
     e.preventDefault();
     return $('#comment-form').slideToggle();
   });
+
 });

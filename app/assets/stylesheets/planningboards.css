@@ -44,3 +44,7 @@ margin: 5 auto;
 #comment-form {
   display: none;
 }
+
+#comment-link {
+  margin-left: 10px;
+}

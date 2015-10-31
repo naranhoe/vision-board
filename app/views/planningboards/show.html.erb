@@ -10,10 +10,14 @@
     <%= link_to 'Back', planningboards_path %>
   </p>
 
-  <p>
-    <button type="button" name="button" id="show-form">Add a comment</button> <strong>Comments:
-      <%= @planningboard.comments.count %></strong>
-  </p>
+  <div class="row">
+
+    <div class="col-md-12">
+      <button type="button" name="button" id="show-form">Add a comment</button>
+      <span id="comment-link"><strong>Comments: <%= link_to @planningboard.comments.count, "#comment-list" %></strong></span>
+    </div>
+
+  </div>
 
   <div id="comment-form">
       <%= form_for([@planningboard, @planningboard.comments.build]) do |f| %>
@@ -119,20 +123,28 @@
 
   </div>
 
+</div>
+
+<div class="container">
+
   <div class="row">
 
-    <h2>Comments</h2>
-      <% @planningboard.comments.each do |comment| %>
-        <p>
-          <strong>Name:</strong>
-          <%= comment.commenter %>
-        </p>
-
-        <p>
-          <strong>Comment:</strong>
-          <%= comment.body %>
-        </p>
-      <% end %>
+    <div id="comment-list">
+      <h2>Comments</h2>
+        <% @planningboard.comments.each do |comment| %>
+          <% if comment.commenter %>
+            <p>
+              <strong>Name:</strong>
+              <%= comment.commenter %>
+            </p>
+            <p>
+              <strong>Comment:</strong>
+              <%= comment.body %>
+            </p>
+            <%= link_to "Delete", [comment.planningboard, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+          <% end %>
+        <% end %>
+    </div>
 
   </div>
 
