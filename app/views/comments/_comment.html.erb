@@ -1,0 +1,13 @@
+<% if @planningboard.comments. %>
+<p>
+  <strong>Name:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+<%= link_to "Delete", [comment.planningboard, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+
+<% end %>
