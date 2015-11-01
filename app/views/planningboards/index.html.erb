@@ -1,36 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<div class = "container">
-  <h1>Vision Board</h1>
+<div class="container" id="newboard">
+  <%= link_to 'New Planningboard', new_planningboard_path %>
 </div>
 
+<div class = "container title">
+  <h1>VizionBoard</h1>
+</div>
+
+
+
+
     <% @planningboards.each do |planningboard| %>
-      <h2 class = "board-name"><%= planningboard.name %></h2>
+      <h2 class = "board-name"><%= link_to planningboard.name, planningboard %></h2>
         <div class = "container-board">
           <div class = "image-box img-first">
-            <%= image_tag planningboard.url1 %>
+            <%= link_to (image_tag planningboard.url1), planningboard %>
           </div>
           <div class = "image-box">
-            <%= image_tag planningboard.url2 %>
+            <%= link_to (image_tag planningboard.url2), planningboard %>
           </div>
           <div class = "image-box img-last">
-            <%= image_tag planningboard.url3 %>
+            <%= link_to (image_tag planningboard.url3), planningboard %>
           </div>
         </div>
         <div class = "container-board">
           <div class = "image-box img-first">
-            <%= image_tag planningboard.url4 %>
+            <%= link_to (image_tag planningboard.url4), planningboard %>
           </div>
           <div class = "image-box img-last">
-            <%= image_tag planningboard.url5 %>
+            <%= link_to (image_tag planningboard.url5), planningboard %>
           </div>
         </div>
-
-            <%= link_to 'Show', planningboard %>
-            <%= link_to 'Edit', edit_planningboard_path(planningboard) %>
-            <%= link_to 'Destroy', planningboard, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <div class="container board-links">
+          <%= link_to 'Show', planningboard %>
+          <%= link_to 'Edit', edit_planningboard_path(planningboard) %>
+          <%= link_to 'Delete', planningboard, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
     </div>
     <% end %>
 <br>
-
-<%= link_to 'New Planningboard', new_planningboard_path %>

@@ -3,6 +3,14 @@
   They will automatically be included in application.css.
 */
 
+.title {
+ text-align: center;
+ font-size: 40px;
+ font-family: sans-serif;
+ color: #CFD8DC ;
+
+}
+
 h1 {
   text-align: center;
 }
@@ -45,8 +53,25 @@ img {
   text-align: center;
 }
 
+.board-links {
+  text-align: left;
+}
+
+.board-links a {
+  margin-right: 10px;
+}
+
+.board-name a{
+  font-size: 18px;
+}
+
+#newboard {
+  text-align: right;
+}
+
 .show-box {
   text-align: center;
+
 }
 
 .show-box img {
