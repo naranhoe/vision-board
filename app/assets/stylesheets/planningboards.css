@@ -52,6 +52,7 @@ img {
 .board{
   text-align: center;
 }
+<<<<<<< HEAD
 
 .board-links {
   text-align: left;
@@ -89,4 +90,10 @@ img {
 
 #comment-form {
   display: none;
+}
+
+.outter-container{
+  background-color: lightgrey;
+  /*text-align: left;*/
+
 }
