@@ -9,7 +9,7 @@ class PlanningboardsController < ApplicationController
 
   # GET /planningboards/1
   # GET /planningboards/1.json
-  def show
+  def show 
   end
 
   # GET /planningboards/new

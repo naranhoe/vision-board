@@ -9,31 +9,9 @@
     <%= link_to 'Edit', edit_planningboard_path(@planningboard) %> |
     <%= link_to 'Back', planningboards_path %>
   </p>
-
-  <div class="row">
-
-    <div class="col-md-12">
-      <button type="button" name="button" id="show-form">Add a comment</button>
-      <span id="comment-link"><strong>Comments: <%= link_to @planningboard.comments.count, "#comment-list" %></strong></span>
-    </div>
-
-  </div>
-
-  <div id="comment-form">
-      <%= form_for([@planningboard, @planningboard.comments.build]) do |f| %>
-        <p>
-          <%= f.label :commenter, "Name" %><br>
-          <%= f.text_field :commenter %>
-        </p>
-        <p>
-          <%= f.label :body, "Comment" %><br>
-          <%= f.text_area :body %>
-        </p>
-        <p>
-          <%= f.submit "Submit" %>
-        </p>
-      <% end %>
-  </div>
+  <p>
+    <span id="comment-link"><strong>Comments: <%= link_to @planningboard.comments.count, "#comment-list" %></strong></span>
+  </p>
 
   <div class="row">
 
@@ -131,6 +109,40 @@
 
     <div id="comment-list">
       <h2>Comments</h2>
+      <div class="row">
+
+        <div class="col-md-12">
+          <button type="button" name="button" id="show-form">Submit a comment</button>
+        </div>
+
+      </div>
+
+      <div id="comment-form">
+          <%= form_for([@planningboard, @planningboard.comments.build]) do |f| %>
+              <% if @planningboard.comments.build.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@planningboard.errors.count, "error") %> prohibited this planningboard from being saved:</h2>
+
+                  <ul>
+                  <% @planningboard.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            <p>
+              <%= f.label :commenter, "Name" %><br>
+              <%= f.text_field :commenter %>
+            </p>
+            <p>
+              <%= f.label :body, "Comment" %><br>
+              <%= f.text_area :body, size: "30x5" %>
+            </p>
+            <p>
+              <%= f.submit "Submit" %>
+            </p>
+          <% end %>
+      </div>
         <% @planningboard.comments.each do |comment| %>
           <% if comment.commenter %>
             <p>
@@ -142,6 +154,7 @@
               <%= comment.body %>
             </p>
             <%= link_to "Delete", [comment.planningboard, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+            <hr>
           <% end %>
         <% end %>
     </div>

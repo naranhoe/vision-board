@@ -5,26 +5,26 @@
 </div>
 
     <% @planningboards.each do |planningboard| %>
-      <div class = "container board">
-        <h2 class = "board-name"><%= planningboard.name %></h2>
-          <div class = "row">
-            <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url1 %>
-            </div>
-            <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url2 %>
-            </div>
-            <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url3 %>
-            </div>
-            <div class = "row">
-              <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url4 %>
-            </div>
-            <div class = "col-md-3 col-centered">
-              <%= image_tag planningboard.url5 %>
-            </div>
+      <h2 class = "board-name"><%= planningboard.name %></h2>
+        <div class = "container-board">
+          <div class = "image-box img-first">
+            <%= image_tag planningboard.url1 %>
           </div>
+          <div class = "image-box">
+            <%= image_tag planningboard.url2 %>
+          </div>
+          <div class = "image-box img-last">
+            <%= image_tag planningboard.url3 %>
+          </div>
+        </div>
+        <div class = "container-board">
+          <div class = "image-box img-first">
+            <%= image_tag planningboard.url4 %>
+          </div>
+          <div class = "image-box img-last">
+            <%= image_tag planningboard.url5 %>
+          </div>
+        </div>
 
             <%= link_to 'Show', planningboard %>
             <%= link_to 'Edit', edit_planningboard_path(planningboard) %>

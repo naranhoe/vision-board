@@ -2,22 +2,43 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-img{
+
+h1 {
+  text-align: center;
+}
+
+.image-box img{
+  height: 400px;
+  width: 400px;
+}
+
+img {
   height: 300px;
   width: 300px;
 }
-.img-box{
-  margin-left: 5px;
-  margin-right: 5px;
+
+.container-board {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.col-centered{
-/*float: none;*/
-margin: 5 auto;
+.image-box {
+  margin: 0 10px 0 10px;
+}
+
+.img-first{
+  margin-left: auto;
+}
+
+.img-last{
+  margin-right: auto;
 }
 
 .board-name{
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
+  text-align: center;
 }
 
 .board{
@@ -43,8 +64,4 @@ margin: 5 auto;
 
 #comment-form {
   display: none;
-}
-
-#comment-link {
-  margin-left: 10px;
 }
