@@ -2,7 +2,6 @@
   <% if @planningboard.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@planningboard.errors.count, "error") %> prohibited this planningboard from being saved:</h2>
-
       <ul>
       <% @planningboard.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,66 +10,93 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :goal1 %><br>
-    <%= f.text_field :goal1 %>
+<div class = "outter-container">
+  <div class = "container">
+    <div class = "row row-centered">
+      <div class="col-xs-3 col-centered">
+        <%= f.label :goal1 %><br>
+        <%= f.text_field :goal1 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :url1 %><br>
+        <%= f.text_field :url1 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :description1 %><br>
+        <%= f.text_area :description1 %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :goal2 %><br>
-    <%= f.text_field :goal2 %>
+  <!-- ------------------------------------- -->
+  <div class = "container">
+    <div class = "row row-centered">
+      <div class="col-xs-3 col-centered">
+        <%= f.label :goal2 %><br>
+        <%= f.text_field :goal2 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :url2 %><br>
+        <%= f.text_field :url2 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :description2 %><br>
+        <%= f.text_area :description2 %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :goal3 %><br>
-    <%= f.text_field :goal3 %>
+  <!-- ------------------------------------- -->
+  <div class = "container">
+    <div class = "row row-centered">
+        <div class="col-xs-3 col-centered">
+        <%= f.label :goal3 %><br>
+        <%= f.text_field :goal3 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :url3 %><br>
+        <%= f.text_field :url3 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :description3 %><br>
+        <%= f.text_area :description3 %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :goal4 %><br>
-    <%= f.text_field :goal4 %>
+  <!-- ------------------------------------- -->
+  <div class = "container">
+    <div class = "row row-centered">
+        <div class="col-xs-3 col-centered">
+          <%= f.label :goal4 %><br>
+          <%= f.text_field :goal4 %>
+        </div>
+        <div class="col-xs-3 col-centered">
+          <%= f.label :url4 %><br>
+          <%= f.text_field :url4 %>
+        </div>
+        <div class="col-xs-3 col-centered">
+          <%= f.label :description4 %><br>
+          <%= f.text_area :description4 %>
+        </div>
+      </div>
+    </div>
+  <!-- ------------------------------------- -->
+  <div class = "container">
+    <div class = "row row-centered">
+      <div class="col-xs-3 col-centered">
+        <%= f.label :goal5 %><br>
+        <%= f.text_field :goal5 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :url5 %><br>
+        <%= f.text_field :url5 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label :description5 %><br>
+        <%= f.text_area :description5 %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :goal5 %><br>
-    <%= f.text_field :goal5 %>
-  </div>
-  <div class="field">
-    <%= f.label :url1 %><br>
-    <%= f.text_field :url1 %>
-  </div>
-  <div class="field">
-    <%= f.label :url2 %><br>
-    <%= f.text_field :url2 %>
-  </div>
-  <div class="field">
-    <%= f.label :url3 %><br>
-    <%= f.text_field :url3 %>
-  </div>
-  <div class="field">
-    <%= f.label :url4 %><br>
-    <%= f.text_field :url4 %>
-  </div>
-  <div class="field">
-    <%= f.label :url5 %><br>
-    <%= f.text_field :url5 %>
-  </div>
-  <div class="field">
-    <%= f.label :description1 %><br>
-    <%= f.text_area :description1 %>
-  </div>
-  <div class="field">
-    <%= f.label :description2 %><br>
-    <%= f.text_area :description2 %>
-  </div>
-  <div class="field">
-    <%= f.label :description3 %><br>
-    <%= f.text_area :description3 %>
-  </div>
-  <div class="field">
-    <%= f.label :description4 %><br>
-    <%= f.text_area :description4 %>
-  </div>
-  <div class="field">
-    <%= f.label :description5 %><br>
-    <%= f.text_area :description5 %>
-  </div>
+</div>
+<!-- ------------------------------------- -->
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
