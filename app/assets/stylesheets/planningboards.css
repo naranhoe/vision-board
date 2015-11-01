@@ -96,4 +96,18 @@ img {
   background-color: lightgrey;
   /*text-align: left;*/
 
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 15%;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: .65;
 }

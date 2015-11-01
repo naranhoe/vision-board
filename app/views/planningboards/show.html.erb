@@ -7,7 +7,7 @@
   </p>
   <p>
     <%= link_to 'Edit', edit_planningboard_path(@planningboard) %> |
-    <%= link_to 'Back', planningboards_path %>
+    <%= link_to 'Boards', planningboards_path %>
   </p>
   <p>
     <span id="comment-link"><strong>Comments: <%= link_to @planningboard.comments.count, "#comment-list" %></strong></span>
@@ -112,7 +112,7 @@
       <div class="row">
 
         <div class="col-md-12">
-          <button type="button" name="button" id="show-form">Submit a comment</button>
+          <button type="button" name="button" id="show-form" class="btn">Submit a comment</button>
         </div>
 
       </div>
