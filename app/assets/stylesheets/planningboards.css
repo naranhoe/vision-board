@@ -23,3 +23,7 @@ margin: 5 auto;
 .board{
   text-align: center;
 }
+.outter-container{
+  background-color: lightgrey;
+  /*text-align: left;*/
+}
