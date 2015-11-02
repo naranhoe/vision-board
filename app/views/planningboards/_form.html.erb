@@ -18,106 +18,181 @@
 </div>
 
 
-<div class = "outter-container">
+<div class = "outter-container form-row">
   <div class = "container">
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label "goal 1" %><br>
         <%= f.text_field :goal1 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
         <%= f.text_field :url1 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Upload Picture" %><br>
         <%= f.file_field :picture1 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-1 col-centered">
+        <% if !@planningboard.picture1.blank? %>
+          <%= image_tag @planningboard.picture1, class: "thumbnail" %>
+        <% else %>
+        <p>No image uploaded</p>
+        <% end %>
+      </div>
+      <div class="col-xs-2 col-centered">
+        <p>
+          <label>
+            <%= f.check_box :remove_picture1 %>
+            Remove picture
+          </label>
+        </p>
+      </div>
+      <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
         <%= f.text_area :description1 %>
       </div>
     </div>
   </div>
 
-  <div class = "container">
+  <div class = "container form-row">
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label :goal2 %><br>
         <%= f.text_field :goal2 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
         <%= f.text_field :url2 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Upload Picture" %><br>
         <%= f.file_field :picture2 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-1 col-centered">
+        <% if !@planningboard.picture2.blank? %>
+          <%= image_tag @planningboard.picture2, class: "thumbnail" %>
+        <% else %>
+        <p>No image uploaded</p>
+        <% end %>
+      </div>
+      <div class="col-xs-2 col-centered">
+        <p>
+          <label>
+            <%= f.check_box :remove_picture2 %>
+            Remove picture
+          </label>
+        </p>
+      </div>
+      <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
         <%= f.text_area :description2 %>
       </div>
     </div>
   </div>
 
-  <div class = "container">
+  <div class = "container form-row">
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label :goal3 %><br>
         <%= f.text_field :goal3 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
         <%= f.text_field :url3 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Upload Picture" %><br>
         <%= f.file_field :picture3 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-1 col-centered">
+        <% if !@planningboard.picture3.blank? %>
+          <%= image_tag @planningboard.picture3, class: "thumbnail" %>
+        <% else %>
+        <p>No image uploaded</p>
+        <% end %>
+      </div>
+      <div class="col-xs-2 col-centered">
+        <p>
+          <label>
+            <%= f.check_box :remove_picture3 %>
+            Remove picture
+          </label>
+        </p>
+      </div>
+      <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
         <%= f.text_area :description3 %>
       </div>
     </div>
   </div>
 
-  <div class = "container">
+  <div class = "container form-row">
     <div class = "row row-centered">
         <div class="col-xs-3 col-centered">
           <%= f.label :goal4 %><br>
           <%= f.text_field :goal4 %>
         </div>
-        <div class="col-xs-3 col-centered">
+        <div class="col-xs-2 col-centered">
           <%= f.label "Image Url" %><br>
           <%= f.text_field :url4 %>
         </div>
-        <div class="col-xs-3 col-centered">
+        <div class="col-xs-2 col-centered">
           <%= f.label "Upload Picture" %><br>
           <%= f.file_field :picture4 %>
         </div>
-        <div class="col-xs-3 col-centered">
+        <div class="col-xs-1 col-centered">
+          <% if !@planningboard.picture4.blank? %>
+            <%= image_tag @planningboard.picture4, class: "thumbnail" %>
+          <% else %>
+          <p>No image uploaded</p>
+          <% end %>
+        </div>
+        <div class="col-xs-2 col-centered">
+          <p>
+            <label>
+              <%= f.check_box :remove_picture4 %>
+              Remove picture
+            </label>
+          </p>
+        </div>
+        <div class="col-xs-2 col-centered">
           <%= f.label "Description" %><br>
           <%= f.text_area :description4 %>
         </div>
       </div>
     </div>
 
-  <div class = "container">
+  <div class = "container form-row">
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label :goal5 %><br>
         <%= f.text_field :goal5 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
         <%= f.text_field :url5 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-2 col-centered">
         <%= f.label "Upload Picture" %><br>
         <%= f.file_field :picture5 %>
       </div>
-      <div class="col-xs-3 col-centered">
+      <div class="col-xs-1 col-centered">
+        <% if !@planningboard.picture5.blank? %>
+          <%= image_tag @planningboard.picture5, class: "thumbnail" %>
+        <% else %>
+        <p>No image uploaded</p>
+        <% end %>
+      </div>
+      <div class="col-xs-2 col-centered">
+        <p>
+          <label>
+            <%= f.check_box :remove_picture5 %>
+            Remove picture
+          </label>
+        </p>
+      </div>
+      <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
         <%= f.text_area :description5 %>
       </div>

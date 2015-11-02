@@ -23,10 +23,12 @@
       </p>
       <hr>
       <p>
-        <% if @planningboard.picture1? %>
+        <% if @planningboard.picture1.blank? && @planningboard.url1.blank? %>
+          <%= img_tag "placeholder.png" %>
+        <% elsif @planningboard.picture1? %>
           <%= image_tag @planningboard.picture1 %>
         <% else %>
-          <%= image_tag @planningboard.url1 %>
+          <%= link_to (image_tag @planningboard.url1), @planningboard.url1 %>
         <% end %>
       </p>
       <hr>
@@ -46,7 +48,7 @@
         <% if @planningboard.picture2? %>
           <%= image_tag @planningboard.picture2 %>
         <% else %>
-          <%= image_tag @planningboard.url2 %>
+          <%= link_to (image_tag @planningboard.url2), @planningboard.url2 %>
         <% end %>
       </p>
       <hr>
@@ -66,7 +68,7 @@
         <% if @planningboard.picture3? %>
           <%= image_tag @planningboard.picture3 %>
         <% else %>
-          <%= image_tag @planningboard.url3 %>
+          <%= link_to (image_tag @planningboard.url3), @planningboard.url3 %>
         <% end %>
       </p>
       <hr>
@@ -90,7 +92,7 @@
         <% if @planningboard.picture4? %>
           <%= image_tag @planningboard.picture4 %>
         <% else %>
-          <%= image_tag @planningboard.url4 %>
+          <%= link_to (image_tag @planningboard.url4), @planningboard.url4 %>
         <% end %>
       </p>
       <hr>
@@ -110,7 +112,7 @@
         <% if @planningboard.picture5? %>
           <%= image_tag @planningboard.picture5 %>
         <% else %>
-          <%= image_tag @planningboard.url5 %>
+          <%= link_to (image_tag @planningboard.url5), @planningboard.url5 %>
         <% end %>
       </p>
       <hr>

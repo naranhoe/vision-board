@@ -116,3 +116,12 @@ img {
 .form {
   margin-top: 20px;
 }
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+}
+
+.form-row {
+  margin-top: 10px;
+}
