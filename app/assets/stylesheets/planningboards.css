@@ -52,19 +52,19 @@ img {
 .board{
   text-align: center;
 }
-<<<<<<< HEAD
 
 .board-links {
   text-align: left;
+
 }
 
 .board-links a {
-  margin-right: 10px;
-  font-size: 15px;
+  /*margin-right: 10px;*/
+  font-size: 14px;
 }
 
-.board-name a{
-  font-size: 18px;
+.board-name a {
+  font-size: 14px;
 }
 
 #newboard {
@@ -96,6 +96,9 @@ img {
 .outter-container{
   /*background-color: lightgrey;*/
   /*text-align: left;*/
+  /*background-color: #fff;
+  color: #333;*/
+  /*background-image: url("http://p1.pichost.me/i/10/1333648.jpg");*/
 }
 
 .btn {
@@ -125,4 +128,36 @@ img {
 
 .form-row {
   margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 15%;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: .65;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+}
+
+.form-row {
+  margin-top: 10px;
+}
+.pipe {
+  font-size: 18px;
 }
