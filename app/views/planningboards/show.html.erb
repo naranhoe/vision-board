@@ -25,7 +25,7 @@
       <hr>
       <p>
         <% if @planningboard.picture1.blank? && @planningboard.url1.blank? %>
-          <%= img_tag "placeholder.png" %>
+          <%= image_tag ("placeholder.png") %>
         <% elsif @planningboard.picture1? %>
           <%= image_tag @planningboard.picture1 %>
         <% else %>
