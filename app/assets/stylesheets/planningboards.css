@@ -128,3 +128,32 @@ img {
 .form-row {
   margin-top: 10px;
 }
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 15%;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: .65;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+}
+
+.form-row {
+  margin-top: 10px;
+}
