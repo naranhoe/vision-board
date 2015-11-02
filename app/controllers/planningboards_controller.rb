@@ -69,6 +69,10 @@ class PlanningboardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def planningboard_params
-      params.require(:planningboard).permit(:goal1, :goal2, :goal3, :goal4, :goal5, :url1, :url2, :url3, :url4, :url5, :description1, :description2, :description3, :description4, :description5, :name)
+      params.require(:planningboard).permit(:goal1, :goal2, :goal3, :goal4, :goal5,
+                      :url1, :url2, :url3, :url4, :url5,
+                      :description1, :description2, :description3, :description4, :description5,
+                      :name, :picture1, :picture2, :picture3, :picture4, :picture5,
+                      :remove_picture1, :remove_picture2, :remove_picture3, :remove_picture4, :remove_picture5)
     end
 end

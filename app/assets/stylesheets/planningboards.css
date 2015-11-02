@@ -2,31 +2,129 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-img{
+
+.title {
+ text-align: center;
+ font-size: 40px;
+ font-family: sans-serif;
+ color: #CFD8DC ;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+.image-box img{
+  height: 400px;
+  width: 400px;
+}
+
+img {
   height: 300px;
   width: 300px;
 }
-.img-box{
-  margin-left: 5px;
-  margin-right: 5px;
+
+.container-board {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.col-centered{
-/*float: none;*/
-margin: 5 auto;
+.image-box {
+  margin: 0 10px 0 10px;
+}
+
+.img-first{
+  margin-left: auto;
+}
+
+.img-last{
+  margin-right: auto;
 }
 
 .board-name{
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
+  text-align: center;
 }
 
 .board{
   text-align: center;
 }
+<<<<<<< HEAD
+
+.board-links {
+  text-align: left;
+}
+
+.board-links a {
+  margin-right: 10px;
+}
+
+.board-name a{
+  font-size: 18px;
+}
+
+#newboard {
+  text-align: right;
+}
+
+.show-box {
+  text-align: center;
+
+}
+
+.show-box img {
+  border-radius: 10px
+}
+
+.show-box hr {
+  width: 250px;
+}
+
+.show-description {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#comment-form {
+  display: none;
+}
+
 .outter-container{
-  background-color: lightgrey;
+  /*background-color: lightgrey;*/
   /*text-align: left;*/
   /*background-color: #fff;
   color: #333;*/
   /*background-image: url("http://p1.pichost.me/i/10/1333648.jpg");*/
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 15%;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: .65;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+}
+
+.form-row {
+  margin-top: 10px;
 }

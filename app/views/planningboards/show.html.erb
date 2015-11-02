@@ -1,64 +1,188 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Goal1:</strong>
-  <%= @planningboard.goal1 %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Goal2:</strong>
-  <%= @planningboard.goal2 %>
-</p>
+  <p>
+    <h1><%= @planningboard.name %></h1>
+  </p>
+  <p>
+    <div class="board-links">
+      <%= link_to 'Edit', edit_planningboard_path(@planningboard) %>
+      <%= link_to 'Boards', planningboards_path %>
+    </div>
+  </p>
+  <p>
+    <span id="comment-link"><strong>Comments: <%= link_to @planningboard.comments.count, "#comment-list" %></strong></span>
+  </p>
 
-<p>
-  <strong>Goal3:</strong>
-  <%= @planningboard.goal3 %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Goal4:</strong>
-  <%= @planningboard.goal4 %>
-</p>
+    <div class="col-md-4 show-box">
+      <p>
+        <h2><%= @planningboard.goal1 %></h2>
+      </p>
+      <hr>
+      <p>
+        <% if @planningboard.picture1.blank? && @planningboard.url1.blank? %>
+          <%= img_tag "placeholder.png" %>
+        <% elsif @planningboard.picture1? %>
+          <%= image_tag @planningboard.picture1 %>
+        <% else %>
+          <%= link_to (image_tag @planningboard.url1), @planningboard.url1 %>
+        <% end %>
+      </p>
+      <hr>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description1 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Goal5:</strong>
-  <%= @planningboard.goal5 %>
-</p>
+    <div class="col-md-4 show-box">
+      <p>
+        <h2><%= @planningboard.goal2 %></h2>
+      </p>
+      <hr>
+      <p>
+        <% if @planningboard.picture2? %>
+          <%= image_tag @planningboard.picture2 %>
+        <% else %>
+          <%= link_to (image_tag @planningboard.url2), @planningboard.url2 %>
+        <% end %>
+      </p>
+      <hr>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description2 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Url1:</strong>
-  <%= image_tag @planningboard.url1 %>
-</p>
+    <div class="col-md-4 show-box">
+      <p>
+        <h2><%= @planningboard.goal3 %></h2>
+      </p>
+      <hr>
+      <p>
+        <% if @planningboard.picture3? %>
+          <%= image_tag @planningboard.picture3 %>
+        <% else %>
+          <%= link_to (image_tag @planningboard.url3), @planningboard.url3 %>
+        <% end %>
+      </p>
+      <hr>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description3 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Url2:</strong>
-  <%= image_tag @planningboard.url2 %>
-</p>
+  </div>
 
-<p>
-  <strong>Url3:</strong>
-  <%= image_tag @planningboard.url3 %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Url4:</strong>
-  <%= image_tag @planningboard.url4 %>
-</p>
+    <div class="col-md-5 col-md-offset-1 show-box">
+      <p>
+        <h2><%= @planningboard.goal4 %></h2>
+      </p>
+      <hr>
+      <p>
+        <% if @planningboard.picture4? %>
+          <%= image_tag @planningboard.picture4 %>
+        <% else %>
+          <%= link_to (image_tag @planningboard.url4), @planningboard.url4 %>
+        <% end %>
+      </p>
+      <hr>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description4 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Url5:</strong>
-  <%= image_tag @planningboard.url5 %>
-</p>
+    <div class="col-md-5 show-box">
+      <p>
+        <h2><%= @planningboard.goal5 %></h2>
+      </p>
+      <hr>
+      <p>
+        <% if @planningboard.picture5? %>
+          <%= image_tag @planningboard.picture5 %>
+        <% else %>
+          <%= link_to (image_tag @planningboard.url5), @planningboard.url5 %>
+        <% end %>
+      </p>
+      <hr>
+      <div class="show-description">
+        <p>
+          <%= @planningboard.description5 %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Description1:</strong>
-  <%= @planningboard.description1 %>
-</p>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @planningboard.name %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_planningboard_path(@planningboard) %> |
-<%= link_to 'Back', planningboards_path %>
+<div class="container">
+
+  <div class="row">
+
+    <div id="comment-list">
+      <h2>Comments</h2>
+      <div class="row">
+
+        <div class="col-md-12">
+          <button type="button" name="button" id="show-form" class="btn">Submit a comment</button>
+        </div>
+
+      </div>
+
+      <div id="comment-form">
+          <%= form_for([@planningboard, @planningboard.comments.build]) do |f| %>
+              <% if @planningboard.comments.build.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@planningboard.errors.count, "error") %> prohibited this planningboard from being saved:</h2>
+
+                  <ul>
+                  <% @planningboard.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            <p>
+              <%= f.label :commenter, "Name" %><br>
+              <%= f.text_field :commenter %>
+            </p>
+            <p>
+              <%= f.label :body, "Comment" %><br>
+              <%= f.text_area :body, size: "30x5" %>
+            </p>
+            <p>
+              <%= f.submit "Submit" %>
+            </p>
+          <% end %>
+      </div>
+        <% @planningboard.comments.each do |comment| %>
+          <% if comment.commenter %>
+            <p>
+              <strong>Name:</strong>
+              <%= comment.commenter %>
+            </p>
+            <p>
+              <strong>Comment:</strong>
+              <%= comment.body %>
+            </p>
+            <%= link_to "Delete", [comment.planningboard, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+            <hr>
+          <% end %>
+        <% end %>
+    </div>
+
+  </div>
+
+</div>

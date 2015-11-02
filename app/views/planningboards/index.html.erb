@@ -1,36 +1,59 @@
 <p id="notice"><%= notice %></p>
 
-<div class = "container">
-  <h1>Vision Board</h1>
+<div class="container" id="newboard">
+  <%= link_to 'New Planningboard', new_planningboard_path %>
+</div>
+
+<div class = "container title">
+  <h1>VizionBoard</h1>
 </div>
 
     <% @planningboards.each do |planningboard| %>
-      <div class = "container board">
-        <h2 class = "board-name"><%= planningboard.name %></h2>
-          <div class = "row">
-            <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url1 %>
-            </div>
-            <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url2 %>
-            </div>
-            <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url3 %>
-            </div>
-            <div class = "row">
-              <div class = "col-md-3 img-box col-centered">
-              <%= image_tag planningboard.url4 %>
-            </div>
-            <div class = "col-md-3 col-centered">
-              <%= image_tag planningboard.url5 %>
-            </div>
+      <h2 class = "board-name"><%= link_to planningboard.name, planningboard %></h2>
+        <div class = "container-board">
+          <div class = "image-box img-first">
+            <% if planningboard.picture1? %>
+              <%= link_to (image_tag planningboard.picture1), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url1), planningboard %>
+            <% end %>
           </div>
-
-            <%= link_to 'Show', planningboard %>
-            <%= link_to 'Edit', edit_planningboard_path(planningboard) %>
-            <%= link_to 'Destroy', planningboard, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class = "image-box">
+            <% if planningboard.picture2? %>
+              <%= link_to (image_tag planningboard.picture2), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url2), planningboard %>
+            <% end %>
+          </div>
+          <div class = "image-box img-last">
+            <% if planningboard.picture3? %>
+              <%= link_to (image_tag planningboard.picture3), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url3), planningboard %>
+            <% end %>
+          </div>
+        </div>
+        <div class = "container-board">
+          <div class = "image-box img-first">
+            <% if planningboard.picture4? %>
+              <%= link_to (image_tag planningboard.picture4), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url4), planningboard %>
+            <% end %>
+          </div>
+          <div class = "image-box img-last">
+            <% if planningboard.picture5? %>
+              <%= link_to (image_tag planningboard.picture5), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url5), planningboard %>
+            <% end %>
+          </div>
+        </div>
+        <div class="container board-links">
+          <%= link_to 'Show', planningboard %>
+          <%= link_to 'Edit', edit_planningboard_path(planningboard) %>
+          <%= link_to 'Delete', planningboard, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
     </div>
     <% end %>
 <br>
-
-<%= link_to 'New Planningboard', new_planningboard_path %>
