@@ -6,8 +6,10 @@
     <h1><%= @planningboard.name %></h1>
   </p>
   <p>
-    <%= link_to 'Edit', edit_planningboard_path(@planningboard) %> |
-    <%= link_to 'Boards', planningboards_path %>
+    <div class="board-links">
+      <%= link_to 'Edit', edit_planningboard_path(@planningboard) %>
+      <%= link_to 'Boards', planningboards_path %>
+    </div>
   </p>
   <p>
     <span id="comment-link"><strong>Comments: <%= link_to @planningboard.comments.count, "#comment-list" %></strong></span>
@@ -21,7 +23,11 @@
       </p>
       <hr>
       <p>
-        <%= image_tag @planningboard.url1 %>
+        <% if @planningboard.picture1? %>
+          <%= image_tag @planningboard.picture1 %>
+        <% else %>
+          <%= image_tag @planningboard.url1 %>
+        <% end %>
       </p>
       <hr>
       <div class="show-description">
@@ -37,7 +43,11 @@
       </p>
       <hr>
       <p>
-        <%= image_tag @planningboard.url2 %>
+        <% if @planningboard.picture2? %>
+          <%= image_tag @planningboard.picture2 %>
+        <% else %>
+          <%= image_tag @planningboard.url2 %>
+        <% end %>
       </p>
       <hr>
       <div class="show-description">
@@ -53,7 +63,11 @@
       </p>
       <hr>
       <p>
-        <%= image_tag @planningboard.url3 %>
+        <% if @planningboard.picture3? %>
+          <%= image_tag @planningboard.picture3 %>
+        <% else %>
+          <%= image_tag @planningboard.url3 %>
+        <% end %>
       </p>
       <hr>
       <div class="show-description">
@@ -73,7 +87,11 @@
       </p>
       <hr>
       <p>
-        <%= image_tag @planningboard.url4 %>
+        <% if @planningboard.picture4? %>
+          <%= image_tag @planningboard.picture4 %>
+        <% else %>
+          <%= image_tag @planningboard.url4 %>
+        <% end %>
       </p>
       <hr>
       <div class="show-description">
@@ -89,7 +107,11 @@
       </p>
       <hr>
       <p>
-        <%= image_tag @planningboard.url5 %>
+        <% if @planningboard.picture5? %>
+          <%= image_tag @planningboard.picture5 %>
+        <% else %>
+          <%= image_tag @planningboard.url5 %>
+        <% end %>
       </p>
       <hr>
       <div class="show-description">

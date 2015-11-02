@@ -8,28 +8,45 @@
   <h1>VizionBoard</h1>
 </div>
 
-
-
-
     <% @planningboards.each do |planningboard| %>
       <h2 class = "board-name"><%= link_to planningboard.name, planningboard %></h2>
         <div class = "container-board">
           <div class = "image-box img-first">
-            <%= link_to (image_tag planningboard.url1), planningboard %>
+            <% if planningboard.picture1? %>
+              <%= link_to (image_tag planningboard.picture1), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url1), planningboard %>
+            <% end %>
           </div>
           <div class = "image-box">
-            <%= link_to (image_tag planningboard.url2), planningboard %>
+            <% if planningboard.picture2? %>
+              <%= link_to (image_tag planningboard.picture2), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url2), planningboard %>
+            <% end %>
           </div>
           <div class = "image-box img-last">
-            <%= link_to (image_tag planningboard.url3), planningboard %>
+            <% if planningboard.picture3? %>
+              <%= link_to (image_tag planningboard.picture3), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url3), planningboard %>
+            <% end %>
           </div>
         </div>
         <div class = "container-board">
           <div class = "image-box img-first">
-            <%= link_to (image_tag planningboard.url4), planningboard %>
+            <% if planningboard.picture4? %>
+              <%= link_to (image_tag planningboard.picture4), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url4), planningboard %>
+            <% end %>
           </div>
           <div class = "image-box img-last">
-            <%= link_to (image_tag planningboard.url5), planningboard %>
+            <% if planningboard.picture5? %>
+              <%= link_to (image_tag planningboard.picture5), planningboard %>
+            <% else %>
+              <%= link_to (image_tag planningboard.url5), planningboard %>
+            <% end %>
           </div>
         </div>
         <div class="container board-links">
