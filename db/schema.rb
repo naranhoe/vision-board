@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151031200944) do
+ActiveRecord::Schema.define(version: 20151102121436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 20151031200944) do
     t.text     "description3"
     t.text     "description4"
     t.text     "description5"
+    t.string   "picture1"
+    t.string   "picture2"
+    t.string   "picture3"
+    t.string   "picture4"
+    t.string   "picture5"
   end
 
   add_foreign_key "comments", "planningboards"

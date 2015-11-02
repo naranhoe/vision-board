@@ -10,24 +10,36 @@
     </div>
   <% end %>
 
+<div class="container">
+  <div class="field">
+    <%= f.label "Board Name" %><br>
+    <%= f.text_field :name %>
+  </div>
+</div>
+
+
 <div class = "outter-container">
   <div class = "container">
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
-        <%= f.label :goal1 %><br>
+        <%= f.label "goal 1" %><br>
         <%= f.text_field :goal1 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :url1 %><br>
+        <%= f.label "Image Url" %><br>
         <%= f.text_field :url1 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :description1 %><br>
+        <%= f.label "Upload Picture" %><br>
+        <%= f.file_field :picture1 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label "Description" %><br>
         <%= f.text_area :description1 %>
       </div>
     </div>
   </div>
-  <!-- ------------------------------------- -->
+
   <div class = "container">
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
@@ -35,33 +47,41 @@
         <%= f.text_field :goal2 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :url2 %><br>
+        <%= f.label "Image Url" %><br>
         <%= f.text_field :url2 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :description2 %><br>
+        <%= f.label "Upload Picture" %><br>
+        <%= f.file_field :picture2 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label "Description" %><br>
         <%= f.text_area :description2 %>
       </div>
     </div>
   </div>
-  <!-- ------------------------------------- -->
+
   <div class = "container">
     <div class = "row row-centered">
-        <div class="col-xs-3 col-centered">
+      <div class="col-xs-3 col-centered">
         <%= f.label :goal3 %><br>
         <%= f.text_field :goal3 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :url3 %><br>
+        <%= f.label "Image Url" %><br>
         <%= f.text_field :url3 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :description3 %><br>
+        <%= f.label "Upload Picture" %><br>
+        <%= f.file_field :picture3 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label "Description" %><br>
         <%= f.text_area :description3 %>
       </div>
     </div>
   </div>
-  <!-- ------------------------------------- -->
+
   <div class = "container">
     <div class = "row row-centered">
         <div class="col-xs-3 col-centered">
@@ -69,16 +89,20 @@
           <%= f.text_field :goal4 %>
         </div>
         <div class="col-xs-3 col-centered">
-          <%= f.label :url4 %><br>
+          <%= f.label "Image Url" %><br>
           <%= f.text_field :url4 %>
         </div>
         <div class="col-xs-3 col-centered">
-          <%= f.label :description4 %><br>
+          <%= f.label "Upload Picture" %><br>
+          <%= f.file_field :picture4 %>
+        </div>
+        <div class="col-xs-3 col-centered">
+          <%= f.label "Description" %><br>
           <%= f.text_area :description4 %>
         </div>
       </div>
     </div>
-  <!-- ------------------------------------- -->
+
   <div class = "container">
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
@@ -86,22 +110,25 @@
         <%= f.text_field :goal5 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :url5 %><br>
+        <%= f.label "Image Url" %><br>
         <%= f.text_field :url5 %>
       </div>
       <div class="col-xs-3 col-centered">
-        <%= f.label :description5 %><br>
+        <%= f.label "Upload Picture" %><br>
+        <%= f.file_field :picture5 %>
+      </div>
+      <div class="col-xs-3 col-centered">
+        <%= f.label "Description" %><br>
         <%= f.text_area :description5 %>
       </div>
     </div>
   </div>
 </div>
-<!-- ------------------------------------- -->
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+
+<div class="container">
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn" %>
   </div>
+</div>
+
 <% end %>

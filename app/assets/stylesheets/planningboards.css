@@ -93,8 +93,9 @@ img {
 }
 
 .outter-container{
-  background-color: lightgrey;
+  /*background-color: lightgrey;*/
   /*text-align: left;*/
+}
 
 .btn {
   display: inline-block;
@@ -110,4 +111,8 @@ img {
 
 .btn:hover {
   opacity: .65;
+}
+
+.form {
+  margin-top: 20px;
 }

@@ -1,7 +1,11 @@
 <!-- <h1>Editing Planningboard</h1> -->
 <h1>Editing <%= @planningboard.name %></h1>
 
-<%= link_to 'Show', @planningboard %>
-<%= link_to 'Back', planningboards_path %>
+<div class="container board-links">
+  <%= link_to "Back", @planningboard %>
+  <%= link_to 'Boards', planningboards_path %>
+</div>
 
-<%= render 'form' %>
+<div class="form">
+  <%= render 'form' %>
+</div>
