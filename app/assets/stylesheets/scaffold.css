@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   color: #CFD8DC;
-  background-image: url("/assets/dark-background.jpg");
+  background-image: url("dark-background");
 }
 
 body, p, ol, ul, td {
