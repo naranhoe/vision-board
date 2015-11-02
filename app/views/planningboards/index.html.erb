@@ -50,8 +50,10 @@
           </div>
         </div>
         <div class="container board-links">
-          <%= link_to 'Show', planningboard %>
-          <%= link_to 'Edit', edit_planningboard_path(planningboard) %>
+          <%= link_to 'Show ', planningboard %>
+          <span class="pipe"> | <span>
+          <%= link_to 'Edit ', edit_planningboard_path(planningboard) %>
+          <span class="pipe"> | <span>
           <%= link_to 'Delete', planningboard, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
     </div>

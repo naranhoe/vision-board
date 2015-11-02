@@ -56,14 +56,16 @@ img {
 
 .board-links {
   text-align: left;
+
 }
 
 .board-links a {
-  margin-right: 10px;
+  /*margin-right: 10px;*/
+  font-size: 14px;
 }
 
-.board-name a{
-  font-size: 18px;
+.board-name a {
+  font-size: 15px;
 }
 
 #newboard {
@@ -156,4 +158,7 @@ img {
 
 .form-row {
   margin-top: 10px;
+}
+.pipe {
+  font-size: 18px;
 }
