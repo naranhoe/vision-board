@@ -11,9 +11,11 @@
   <% end %>
 
 <div class="container">
-  <div class="field">
-    <%= f.label "Board Name" %><br>
-    <%= f.text_field :name %>
+  <div class="row field">
+    <div class="col-xs-12" id="show-board-title">
+      <%= f.label "Board Name" %><br>
+      <%= f.text_field :name, size: "35x8" %>
+    </div>
   </div>
 </div>
 
@@ -23,7 +25,7 @@
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label "goal 1" %><br>
-        <%= f.text_field :goal1 %>
+        <%= f.text_field :goal1, size: "35x8" %>
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
@@ -50,7 +52,7 @@
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
-        <%= f.text_area :description1 %>
+        <%= f.text_area :description1, size: "25x5" %>
       </div>
     </div>
   </div>
@@ -59,7 +61,7 @@
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label :goal2 %><br>
-        <%= f.text_field :goal2 %>
+        <%= f.text_field :goal2, size: "35x8" %>
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
@@ -86,7 +88,7 @@
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
-        <%= f.text_area :description2 %>
+        <%= f.text_area :description2, size: "25x5" %>
       </div>
     </div>
   </div>
@@ -95,7 +97,7 @@
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label :goal3 %><br>
-        <%= f.text_field :goal3 %>
+        <%= f.text_field :goal3, size: "35x8" %>
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
@@ -122,7 +124,7 @@
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
-        <%= f.text_area :description3 %>
+        <%= f.text_area :description3, size: "25x5" %>
       </div>
     </div>
   </div>
@@ -131,7 +133,7 @@
     <div class = "row row-centered">
         <div class="col-xs-3 col-centered">
           <%= f.label :goal4 %><br>
-          <%= f.text_field :goal4 %>
+          <%= f.text_field :goal4, size: "35x8" %>
         </div>
         <div class="col-xs-2 col-centered">
           <%= f.label "Image Url" %><br>
@@ -158,7 +160,7 @@
         </div>
         <div class="col-xs-2 col-centered">
           <%= f.label "Description" %><br>
-          <%= f.text_area :description4 %>
+          <%= f.text_area :description4, size: "25x5" %>
         </div>
       </div>
     </div>
@@ -167,7 +169,7 @@
     <div class = "row row-centered">
       <div class="col-xs-3 col-centered">
         <%= f.label :goal5 %><br>
-        <%= f.text_field :goal5 %>
+        <%= f.text_field :goal5, size: "35x8" %>
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Image Url" %><br>
@@ -194,15 +196,17 @@
       </div>
       <div class="col-xs-2 col-centered">
         <%= f.label "Description" %><br>
-        <%= f.text_area :description5 %>
+        <%= f.text_area :description5, size: "25x5" %>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <div class="actions">
-    <%= f.submit class: "btn" %>
+  <div class="row actions">
+    <div class="col-xs-12">
+      <%= f.submit class: "btn" %>
+    </div>
   </div>
 </div>
 

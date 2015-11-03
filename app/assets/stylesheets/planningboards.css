@@ -161,3 +161,15 @@ img {
 .pipe {
   font-size: 18px;
 }
+
+.comments {
+  display: none;
+}
+
+#show-comments {
+  float: right;
+}
+
+#show-board-title {
+  margin-bottom: 15px;
+}

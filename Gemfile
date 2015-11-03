@@ -22,6 +22,8 @@ gem 'jquery-ui-rails'
 
 gem "carrierwave"
 
+gem 'fog', '~> 1.35'
+
 gem "seed_dump"
 
 gem "rails_12factor"
