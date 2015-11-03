@@ -7,4 +7,6 @@ class Planningboard < ActiveRecord::Base
   mount_uploader :picture4, Picture4Uploader
   mount_uploader :picture5, Picture5Uploader
 
+  scope :search, ->(keyword) { where( "lower(name) LIKE ?", "%#{keyword.downcase}%") if keyword.present? }
+
 end

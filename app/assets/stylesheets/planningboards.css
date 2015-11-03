@@ -173,3 +173,26 @@ img {
 #show-board-title {
   margin-bottom: 15px;
 }
+
+#search-box {
+  float: right;
+  display: inline-block;
+}
+
+#search-button {
+  display: inline-block;
+}
+
+.btn-search {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 20px;
+  padding: 0;
+  min-width: 80px;
+  font-size: 14px;
+}
+
+.btn-search:hover {
+  opacity: .65;
+}

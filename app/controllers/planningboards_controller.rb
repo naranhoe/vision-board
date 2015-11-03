@@ -4,7 +4,7 @@ class PlanningboardsController < ApplicationController
   # GET /planningboards
   # GET /planningboards.json
   def index
-    @planningboards = Planningboard.all
+    @planningboards = Planningboard.search(params[:keyword])
   end
 
   # GET /planningboards/1
