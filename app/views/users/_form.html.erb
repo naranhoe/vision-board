@@ -1,4 +1,6 @@
 <%= form_for @user do |f| %>
+<%= render "shared/error_messages" %>
+
   <p>
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
