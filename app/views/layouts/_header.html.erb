@@ -1,11 +1,22 @@
-<div class="container" id="newboard">
-  <%= link_to "Boards", planningboards_path %> |
+<div class="container" id="nav">
   <% if logged_in? %>
-  <%= link_to 'New Planningboard', new_planningboard_path %> |
-  <%= link_to "#{@current_user.first_name}'s Profile", user_path(@current_user) %> | 
-  <%= link_to "Sign Out", logout_path, method: :delete %>
+    <div class="nav">
+      <div>
+        <%= link_to "VizionBoard", planningboards_path %>
+      </div>
+      <div>
+        <%= link_to 'New Planningboard', new_planningboard_path %>
+      </div>
+      <div>
+        <%= link_to "Sign Out", logout_path, method: :delete %>
+      </div>
+      <div>
+        <%= link_to (image_tag @current_user.avatar, class: "avatar" ), user_path(@current_user) %>
+      </div>
+    </div>
   <% else %>
-  <%= link_to "Sign Up", new_user_path %> |
-  <%= link_to "Sign In", login_path %>
+    <%= link_to "VizionBoard", planningboards_path %> |
+    <%= link_to "Sign Up", new_user_path %> |
+    <%= link_to "Sign In", login_path %>
   <% end %>
 </div>
