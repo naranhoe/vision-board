@@ -1,0 +1,35 @@
+<h1>Sign Up</h1>
+
+<div class="sign-up-form">
+  <%= form_for @user do |f| %>
+  <%= render "shared/error_messages" %>
+
+    <p>
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name, size: "35x8" %>
+    </p>
+
+    <p>
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name, size: "35x8" %>
+    </p>
+    <p>
+      <%= f.label :email %><br>
+      <%= f.email_field :email, size: "35x8" %>
+    </p>
+    <p>
+      <%= f.label :password %><br>
+      <%= f.password_field :password, size: "35x8" %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation, "Confirmation" %><br>
+      <%= f.password_field :password_confirmation, size: "35x8" %>
+    </p>
+    <p>
+      <%= f.label "Avatar" %><br>
+      <%= f.file_field :avatar %>
+    </p>
+    <%= f.submit class: "btn" %>
+  <% end %>
+
+</div>

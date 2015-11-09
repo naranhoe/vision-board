@@ -4,7 +4,7 @@ class PlanningboardsController < ApplicationController
   # GET /planningboards
   # GET /planningboards.json
   def index
-    @planningboards = Planningboard.all
+    @planningboards = Planningboard.search(params[:keyword])
   end
 
   # GET /planningboards/1
@@ -28,7 +28,7 @@ class PlanningboardsController < ApplicationController
 
     respond_to do |format|
       if @planningboard.save
-        format.html { redirect_to @planningboard, notice: 'Planningboard was successfully created.' }
+        format.html { redirect_to @planningboard, notice: "#{@planningboard.name} was successfully created." }
         format.json { render :show, status: :created, location: @planningboard }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PlanningboardsController < ApplicationController
   def update
     respond_to do |format|
       if @planningboard.update(planningboard_params)
-        format.html { redirect_to @planningboard, notice: 'Planningboard was successfully updated.' }
+        format.html { redirect_to @planningboard, notice: "#{@planningboard.name} was successfully updated." }
         format.json { render :show, status: :ok, location: @planningboard }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PlanningboardsController < ApplicationController
   def destroy
     @planningboard.destroy
     respond_to do |format|
-      format.html { redirect_to planningboards_url, notice: 'Planningboard was successfully destroyed.' }
+      format.html { redirect_to planningboards_url, notice: "#{@planningboard.name} was successfully deleted." }
       format.json { head :no_content }
     end
   end

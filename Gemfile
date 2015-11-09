@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby "2.2.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -21,6 +22,8 @@ gem 'jquery-ui-rails'
 
 gem "carrierwave"
 
+gem 'fog', '~> 1.35'
+
 gem "seed_dump"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -34,13 +37,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :production do
+  gem 'puma'
+  gem "rails_12factor"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,32 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container" id="newboard">
-  <%= link_to 'New Planningboard', new_planningboard_path %>
-</div>
-
 <div class = "container title">
-  <h1>VizionBoard</h1>
+  <div id="page-title">
+    <h1>VizionBoard</h1>
+  </div>
+  <div id="search-box">
+    <p>
+      <%= form_tag(planningboards_path, method: "get", class: "navbar-form", id: "search-form") do %>
+        <div class="input-append">
+          <%= text_field_tag :keyword, params[:keyword], placeholder: "Search Planningboards" %>
+          <div id="search-button">
+            <p>
+              <button class="btn-search" type="submit"><i class="icon-search"></i>Search</button>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    </p>
+  </div>
 </div>
 
     <% @planningboards.each do |planningboard| %>
       <h2 class = "board-name"><%= link_to planningboard.name, planningboard %></h2>
         <div class = "container-board">
           <div class = "image-box img-first">
-            <% if planningboard.picture1? %>
+            <% if planningboard.picture1.blank? && planningboard.url1.blank? %>
+              <%= link_to (image_tag "placeholder.png"), planningboard %>
+            <% elsif planningboard.picture1? %>
               <%= link_to (image_tag planningboard.picture1), planningboard %>
             <% else %>
               <%= link_to (image_tag planningboard.url1), planningboard %>
             <% end %>
           </div>
           <div class = "image-box">
-            <% if planningboard.picture2? %>
+            <% if planningboard.picture2.blank? && planningboard.url2.blank? %>
+              <%= link_to (image_tag "placeholder.png"), planningboard %>
+            <% elsif planningboard.picture2? %>
               <%= link_to (image_tag planningboard.picture2), planningboard %>
             <% else %>
               <%= link_to (image_tag planningboard.url2), planningboard %>
             <% end %>
           </div>
           <div class = "image-box img-last">
-            <% if planningboard.picture3? %>
+            <% if planningboard.picture3.blank? && planningboard.url3.blank? %>
+              <%= link_to (image_tag "placeholder.png"), planningboard %>
+            <% elsif planningboard.picture3? %>
               <%= link_to (image_tag planningboard.picture3), planningboard %>
             <% else %>
               <%= link_to (image_tag planningboard.url3), planningboard %>
@@ -35,14 +53,18 @@
         </div>
         <div class = "container-board">
           <div class = "image-box img-first">
-            <% if planningboard.picture4? %>
+            <% if planningboard.picture4.blank? && planningboard.url4.blank? %>
+              <%= link_to (image_tag "placeholder.png"), planningboard %>
+            <% elsif planningboard.picture4? %>
               <%= link_to (image_tag planningboard.picture4), planningboard %>
             <% else %>
               <%= link_to (image_tag planningboard.url4), planningboard %>
             <% end %>
           </div>
           <div class = "image-box img-last">
-            <% if planningboard.picture5? %>
+            <% if planningboard.picture5.blank? && planningboard.url5.blank? %>
+              <%= link_to (image_tag "placeholder.png"), planningboard %>
+            <% elsif planningboard.picture5? %>
               <%= link_to (image_tag planningboard.picture5), planningboard %>
             <% else %>
               <%= link_to (image_tag planningboard.url5), planningboard %>

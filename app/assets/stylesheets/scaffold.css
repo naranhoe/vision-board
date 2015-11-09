@@ -1,12 +1,12 @@
 body {
   background-color: #fff;
   color: #CFD8DC;
-  background-image: url("/assets/dark-background.jpg");
+  background-image: url("dark-background");
 }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
+  font-size:   14px;
   line-height: 18px;
 }
 
@@ -40,25 +40,29 @@ div.field, div.actions {
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid orange;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #000;
+  margin: 0 auto;
 }
 
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
-  font-size: 12px;
+  font-size: 14px;
   margin: -7px;
   margin-bottom: 0px;
-  background-color: #c00;
+  background-color: orange;
   color: #fff;
 }
 
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+  color: orange;
+  font-weight: bold;
+
 }
